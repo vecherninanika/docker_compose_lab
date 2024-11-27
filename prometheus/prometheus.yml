@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'rpc-gateway'
+    static_configs:
+      - targets: ['rpc-gateway:8000']
+
+  - job_name: 'static-gateway'
+    static_configs:
+      - targets: [ 'static-gateway:8001' ]
+
+  - job_name: 'multiply'
+    static_configs:
+      - targets: ['multiply:8000']
+
+  - job_name: 'divide'
+    static_configs:
+      - targets: ['divide:8000']
